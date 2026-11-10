@@ -22,8 +22,9 @@ This utility works 100% locally in your browser. It has zero ads, collects no da
 
 ## Local Development
 
+
 ```bash
-git clone [https://github.com/fylvinn/raw-2-type](https://github.com/fylvinn/raw-2-type.git)
+git clone https://github.com/fylvinn/raw-2-type
 cd raw2type
 npm install
 ng serve

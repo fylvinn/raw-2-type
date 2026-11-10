@@ -114,7 +114,7 @@ kbd {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  background: var(--border-color); /* розділювач між колонками */
+  background: var(--border-color); /* separator between columns */
   min-height: 0;
 }
 

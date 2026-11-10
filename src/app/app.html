@@ -1,5 +1,5 @@
 <div class="app-container">
-  <!-- Верхня лаконічна панель -->
+  <!-- Simple top panel -->
   <header class="top-bar">
     <div class="brand">
       <span class="logo-icon">&#123;&nbsp;&#125;</span>
@@ -17,9 +17,9 @@
     </div>
   </header>
 
-  <!-- Основний 2-колоночний workspace -->
+  <!-- Main 2-column workspace -->
   <main class="workspace">
-    <!-- Ліва колонка: Input Editor -->
+    <!-- Left column: Input Editor -->
     <section class="pane pane-left">
       <div class="pane-header">
         <span class="pane-title">Raw JSON / Log Payload</span>
@@ -36,7 +36,7 @@
         ></textarea>
       </div>
 
-      <!-- Помилка синтаксису внизу колонки -->
+      <!-- Syntax error at the bottom of the column -->
       @if (parser.parseResult().error) {
         <div class="error-banner">
           <span class="error-icon">✕</span>
@@ -51,7 +51,7 @@
       }
     </section>
 
-    <!-- Права колонка: Output TypeScript Interfaces -->
+    <!-- Right column: TypeScript Output Interfaces -->
     <section class="pane pane-right">
       <div class="pane-header">
         <span class="pane-title">Generated TypeScript Interfaces</span>
@@ -66,7 +66,7 @@
     </section>
   </main>
 
-  <!-- Фідбек при копіюванні (Ctrl+Shift+C) -->
+  <!-- Feedback when copying (Ctrl+Shift+C) -->
   @if (shortcuts.copyNotification()) {
     <div class="toast">
       <span class="toast-icon">✓</span>

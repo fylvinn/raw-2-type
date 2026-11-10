@@ -12,7 +12,7 @@ import {CommonModule} from '@angular/common';
   styleUrl: './app.css'
 })
 export class App {
-  private readonly parser = inject(JsonParserService);
+  protected readonly parser = inject(JsonParserService);
   protected readonly shortcuts = inject(ShortcutService);
 
   onInput(event: Event): void {
