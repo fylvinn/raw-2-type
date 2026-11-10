@@ -1,59 +1,32 @@
-# Raw2type
+# raw2type
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.5.
+Fast, anti-bloat utility to format raw JSON and generate clean TypeScript interfaces instantly.
 
-## Development server
+## The Problem / The Solution
 
-To start a local development server, run:
+This utility works 100% locally in your browser. It has zero ads, collects no data, and automatically converts `snake_case` or `kebab-case` keys into clean TypeScript `camelCase`.
+
+## Key Features
+
+- **Instant JSON validation & formatting**
+- **Auto conversion (`snake_case` / `kebab-case` → `camelCase`)**
+- **Recursive TypeScript interface generation**
+- **100% Client-Side (Privacy-First)**
+- **1-Click Copy shortcut (`Ctrl + Shift + C`)**
+
+## Tech Stack
+
+- **Framework:** Angular (Standalone Components)
+- **Language:** TypeScript
+- **Styling:** CSS
+
+## Local Development
 
 ```bash
+git clone [https://github.com/fylvinn/raw-2-type](https://github.com/fylvinn/raw-2-type.git)
+cd raw2type
+npm install
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
