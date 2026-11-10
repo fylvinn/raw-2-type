@@ -1,0 +1,246 @@
+:host {
+  /* Палітра VS Code dark mode */
+  --bg-main: #181818;
+  --bg-pane: #1e1e1e;
+  --bg-header: #252526;
+  --border-color: #2b2b2b;
+  --accent-color: #007acc;
+  --accent-hover: #0062a3;
+  --text-main: #cccccc;
+  --text-muted: #858585;
+  --text-bright: #ffffff;
+  --error-bg: #5a1d1d;
+  --error-text: #f88070;
+  --font-mono: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace;
+
+  display: block;
+  height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Header */
+.top-bar {
+  height: 48px;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  color: var(--accent-color);
+  font-family: var(--font-mono);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.badge {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hotkey-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+kbd {
+  background: #333333;
+  color: var(--text-bright);
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  border: 1px solid #444;
+}
+
+.btn-copy {
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-copy:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.btn-copy:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Workspace 2-Column Grid */
+.workspace {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border-color); /* розділювач між колонками */
+  min-height: 0;
+}
+
+.pane {
+  background: var(--bg-pane);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  position: relative;
+}
+
+.pane-header {
+  height: 36px;
+  background: #2d2d2d;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.pane-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.btn-text {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-text:hover {
+  color: var(--text-bright);
+}
+
+.status-tag {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.status-tag.active {
+  color: #4ec9b0;
+}
+
+/* Code Area */
+.editor-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.code-textarea,
+.code-output {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #d4d4d4;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  tab-size: 2;
+  overflow-y: auto;
+  resize: none;
+}
+
+.code-output {
+  color: #9cdcfe;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Error Banner */
+.error-banner {
+  background: var(--error-bg);
+  color: var(--error-text);
+  padding: 10px 16px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #252526;
+  border: 1px solid var(--accent-color);
+  color: var(--text-bright);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideUp 0.2s ease-out;
+}
+
+.toast-icon {
+  color: #4ec9b0;
+  font-weight: bold;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
