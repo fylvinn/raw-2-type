@@ -27,6 +27,7 @@ git clone [https://github.com/fylvinn/raw-2-type](https://github.com/fylvinn/raw
 cd raw2type
 npm install
 ng serve
+```
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
